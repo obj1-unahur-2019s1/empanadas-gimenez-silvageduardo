@@ -8,6 +8,10 @@ object galvan {
 	var dinero = 0
 	
 	method sueldo() { return sueldo }
+	method totalDinero(){
+		dinero += sueldo
+		return dinero
+	}
 	method sueldo(nuevoValor) { 
 		sueldo = nuevoValor
 		if (deuda > 0){
@@ -23,9 +27,6 @@ object galvan {
 	}
 	method totalDeuda(){
 		return deuda
-	}
-	method totalDinero(){
-		return dinero
 	}
 	
 }
