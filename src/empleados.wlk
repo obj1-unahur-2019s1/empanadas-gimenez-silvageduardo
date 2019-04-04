@@ -15,20 +15,18 @@ object galvan {
 		if (deuda > 0){
 			sueldo -= deuda
 			dinero += sueldo
-			deuda -= sueldo
-				
+			deuda -= deuda}
 			}
-			
-		
-		}
 	method gastar(cuanto){
 		sueldo =- cuanto
 		deuda += cuanto
 		}
 	method totalDeuda(){
+		if (deuda > sueldo)
+		deuda -= dinero
+		dinero -= dinero
 		return deuda
 	}
-
 }
 
 object baigorria {
