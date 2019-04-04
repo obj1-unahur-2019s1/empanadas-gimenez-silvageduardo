@@ -6,10 +6,8 @@ object galvan {
 	var sueldo = 15000
 	var deuda = 0
 	var dinero = 0
-	
 	method sueldo() { return sueldo }
 	method totalDinero(){
-		dinero += sueldo
 		return dinero
 	}
 	method sueldo(nuevoValor) { 
@@ -17,18 +15,20 @@ object galvan {
 		if (deuda > 0){
 			sueldo -= deuda
 			dinero += sueldo
+			deuda -= sueldo
+				
+			}
+			
+		
 		}
-	}
 	method gastar(cuanto){
-		dinero -= cuanto
-		if (dinero < cuanto){
-			deuda += cuanto
+		sueldo =- cuanto
+		deuda += cuanto
 		}
-	}
 	method totalDeuda(){
 		return deuda
 	}
-	
+
 }
 
 object baigorria {
