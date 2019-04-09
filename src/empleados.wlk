@@ -1,34 +1,41 @@
 object galvan {
-	// la linea que sigue es equivalente a todo lo que está debajo.
-	// le agrega al objeto: un atributo, el método para acceder, y el método para modificar.
-//	var property sueldo = 15000
-
 	var sueldo = 15000
 	var deuda = 0
 	var dinero = 0
 	method sueldo() { return sueldo }
-	method totalDinero(){
-		return dinero
-	}
 	method sueldo(nuevoValor) { 
 		sueldo = nuevoValor
 		if (deuda > 0){
 			sueldo -= deuda
 			dinero += sueldo
-			deuda -= deuda}
+			deuda -= nuevoValor
+			}
+		if (deuda <0){
+			deuda = 0
+		}	
 			}
 	method gastar(cuanto){
 		sueldo =- cuanto
 		deuda += cuanto
+		if ( dinero > 0 && deuda > sueldo){
+		 deuda -= dinero
+		 dinero -= dinero
 		}
+		
+}
 	method totalDeuda(){
-		if (deuda > sueldo)
-		deuda -= dinero
-		dinero -= dinero
-		return deuda
+		 return deuda
+		 }
+
+	method totalDinero(){
+		if (dinero > 0){
+			return dinero
+		}else{
+			dinero = 0
+			return dinero
+		}
 	}
 }
-
 object baigorria {
 	var cantidadEmpanadasVendidas = 100
 	var montoPorEmpanada = 15
